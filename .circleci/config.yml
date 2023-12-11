@@ -23,8 +23,8 @@ workflows:
       - build_and_test
       - eb/deploy:
           context: aws
-          application-name: portfolioWebApp
-          environment-name: PortfolioWebApp-env
+          application-name: $APP
+          environment-name: $ENV
           filters:
             branches:
               only:
