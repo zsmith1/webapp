@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@5.0.2
+  aws-elastic-beanstalk: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
   build_and_test: # this can be any name you choose
@@ -20,3 +21,13 @@ workflows:
   test_my_app:
     jobs:
       - build_and_test
+      - eb/deploy:
+          context: aws
+          environment-name: PortfolioWebApp-env  
+          filters:
+            branches:
+              only:
+                - main
+          label: version-<<pipeline.number>>
+          requires:
+            - build_and_test
