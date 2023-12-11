@@ -28,6 +28,6 @@ workflows:
             branches:
               only:
                 - main
-          label: version-<<pipeline.number>>
+          label: portfolioWebApp-version-<<pipeline.number>>
           requires:
             - build_and_test
