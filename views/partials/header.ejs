@@ -1,14 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md">
     <a class="navbar-brand" href="/">Zach Smith Portfolio</a>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Bio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/skills">Skills</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/projects">Projects</a>
-      </li>
-    </ul>
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+        <% if(tab == 'bio'){ %>
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Bio</a>
+          </li>
+          <% } else{ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Bio</a>
+          </li>
+        <% } %>
+        <% if(tab == 'projects'){ %>
+          <li class="nav-item">
+            <a class="nav-link active" href="/projects">Projects</a>
+          </li>
+          <% } else{ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <a class="nav-link" href="mailto:zach.smith2171@gmail.com" target="_blank">Contact Me</a>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Links
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">LinkedIn</a>
+            <a class="dropdown-item" href="https://github.com/zsmith1" target="_blank">Github</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </nav>
