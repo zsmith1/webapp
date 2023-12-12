@@ -6,13 +6,54 @@
 <body class="container">
 
 <header>
-  <%- include('../partials/header'); %>
+  <%- include('../partials/header', {tab: 'bio'}); %>
 </header>
 
 <main>
   <div class="jumbotron">
-    <h1>About</h1>
-    <p>Put biography here</p>
+    <h1>Zach Smith</h1>
+    <p>DevOps Engineer</p>
+    <hr>
+    <p>
+      As a seasoned software developer in DevOps, I am a results-driven professional with a proven track record of optimizing and automating processes to improve productivity and throughput. 
+      With a strong background in both software development and operations, I am dedicated to bridging the gap between development and IT teams, fostering collaboration, and implementing robust solutions that drive organizational success.
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">DevOps and Automation</h5>
+              <p class="card-text">Proficient in designing, implementing, and maintaining continuous integration and delivery pipelines using industry-leading tools and frameworks such as Jenkins, GitLab CI/CD, and Ansible to automate manual processes, enabling faster and more reliable software releases.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Infrastructure as Code (IaC)</h5>
+              <p class="card-text">Adept at using tools like Terraform to provision and manage infrastructure in a scalable and reproducible manner ensureing infrastructure changes are version-controlled, tested, and seamlessly integrated into the deployment pipeline.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Containerization and Orchestration</h5>
+              <p class="card-text"> Experienced in container technologies such as Docker and container orchestration platforms like Kubernetes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Collaboration and Communication</h5>
+              <p class="card-text"> Adept at fostering collaboration between development and operations teams. I have effective communication skills and experience translating technical details into business-friendly language, and facilitating cross-functional collaboration to achieve organizational goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
