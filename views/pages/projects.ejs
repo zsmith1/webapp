@@ -12,7 +12,15 @@
 <main>
   <div class="jumbotron">
     <h1>Projects</h1>
-    <p>put projects here</p>
+    <% for (var i = 0; i < repos.length ; i++) { %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= repos[i].name %></h5>
+          <p class="card-text"><%= repos[i].description %></p>
+          <a href="<%= repos[i].html_url %>" class="btn btn-primary">View on Github</a>
+        </div>
+      </div>
+    <% } %>
   </div>
 </main>
 
