@@ -6,7 +6,7 @@
 <body class="container">
 
 <header>
-  <%- include('../partials/header', {tab: 'projects'}); %>
+  <%- include('../partials/header'); %>
 </header>
 
 <main>
@@ -14,15 +14,17 @@
     <h1>Projects</h1>
     <p>This page queries my github profile to show my projects.</p>
     <hr>
-    <% for (var i = 0; i < repos.length ; i++) { %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= repos[i].name %></h5>
-          <p class="card-text"><%= repos[i].description %></p>
-          <a href="<%= repos[i].html_url %>" class="btn btn-primary">View on Github</a>
+    <div class="d-flex flex-row">
+      <% for (var i = 0; i < repos.length ; i++) { %>
+        <div class="card mx-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= repos[i].name %></h5>
+            <p class="card-text"><%= repos[i].description %></p>
+            <a href="<%= repos[i].html_url %>" target="_blank" class="btn btn-primary">View on Github</a>
+          </div>
         </div>
-      </div>
-    <% } %>
+      <% } %>
+    </div>
   </div>
 </main>
 
