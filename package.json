@@ -5,7 +5,10 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "echo 'test'",
-    "build": "echo 'build'"
+    "build": "echo 'build'",
+    "lint": "eslint \"./**/*.js\" --quiet",
+    "lintFull": "eslint \"./**/*.js\"",
+    "lintFix": "eslint --fix './**/*.js'"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,5 +20,40 @@
     "jade-bootstrap": "^1.0.14",
     "morgan": "~1.9.1",
     "octokit": "^3.1.2"
-  }
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 8
+    },
+    "rules": {
+        "brace-style": [
+            "error",
+            "stroustrup"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "no-unused-vars": [
+            "warn"
+        ],
+        "no-var": [
+            "off"
+        ],
+        "one-var": [
+            "off"
+        ]
+    }
+}
 }

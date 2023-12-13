@@ -8,7 +8,7 @@ const other =["Kubernetes", "Docker", "Git", "Agile Development", "Trunk-based D
 
 
 /* GET skills page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     res.render('pages/skills', {
         languages: languages,
         iac: iac,

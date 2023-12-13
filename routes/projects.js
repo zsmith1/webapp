@@ -5,13 +5,13 @@ const octokit = new Octokit();
 
 async function fetchAllRepos(user) {
     const result = await octokit.request('GET /users/{user}/repos', {
-        user: user,
+        user: user
     });
     return result;
 }
 
 /* GET projects page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     fetchAllRepos("zsmith1").then(repos =>
         res.render('pages/projects', {
             repos: repos.data
