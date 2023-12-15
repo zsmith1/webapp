@@ -14,6 +14,8 @@ jobs:
           command: npm run lint
           name: Run Linter
   trigger_ui_tests:
+    docker:
+      - image: cimg/base:current
     steps:
       - run:
           name: Ping web-ui-tests pipeline
