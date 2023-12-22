@@ -1,0 +1,21 @@
+body {
+    overflow: hidden;
+}
+
+body, section {
+    padding: 50px;
+}
+
+.scroll {
+    position: relative;
+    height: 75vh;
+    overflow: auto;
+}
+
+.project-card {
+    width: 16rem;
+    height: 16rem;
+    padding: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+}

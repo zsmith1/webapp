@@ -1,61 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <%- include('../partials/head'); %>
 </head>
-<body class="container">
-
-<header>
-  <%- include('../partials/header'); %>
-</header>
-
+<body>
 <main>
-  <div class="jumbotron">
-    <h1>Zach Smith</h1>
-    <p>DevOps Engineer</p>
-    <hr>
-    <p>
-      As a seasoned software developer in DevOps, I am a results-driven professional with a proven track record of optimizing and automating processes to improve productivity and throughput. 
-      With a strong background in both software development and quality assurance, I am dedicated to bridging the gap between development and IT teams, fostering collaboration, and implementing robust solutions that drive organizational success.
-    </p>
-    <hr>
+  <div class="scroll-section">
     <div class="container">
+      <h1>Zach Smith</h1>
+      <p>DevOps Engineer</p>
       <div class="row">
-        <div class="col-sm">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">DevOps and Automation</h5>
-              <p class="card-text">Proficient in designing, implementing, and maintaining continuous integration and delivery pipelines using industry-leading tools and frameworks such as Jenkins, GitLab CI/CD, and Ansible to automate manual processes, enabling faster and more reliable software releases.</p>
-            </div>
+        <div class="col-4">
+          <div id="sidebar" class="list-group">
+            <a class="list-group-item list-group-item-action" href="#bio">Bio</a>
+            <a class="list-group-item list-group-item-action" href="#skills">Skills</a>
+            <a class="list-group-item list-group-item-action" href="#projects">Projects</a>
+            <a class="list-group-item list-group-item-action" href="#contact">Contact Me</a>
+          </div>
+          <hr>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Links
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">LinkedIn</a></li>
+              <li><a class="dropdown-item" href="https://github.com/zsmith1" target="_blank">Github</a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-sm">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Infrastructure as Code (IaC)</h5>
-              <p class="card-text">Adept at using tools like Terraform to provision and manage infrastructure in a scalable and reproducible manner ensureing infrastructure changes are version-controlled, tested, and seamlessly integrated into the deployment pipeline.</p>
+        <div class="col-8">
+          <div data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example scroll" tabindex="0">
+            <h2 id="bio">Bio</h2>
+            <hr>
+            <p>
+              As a seasoned software developer in DevOps, I am a results-driven professional with a proven track record of optimizing and automating processes to improve productivity and throughput. 
+              With a strong background in both software development and quality assurance, I am dedicated to bridging the gap between development and IT teams, fostering collaboration, and implementing robust solutions that drive organizational success.
+            </p>
+            <hr>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">DevOps and Automation</h5>
+                      <p class="card-text">Proficient in designing, implementing, and maintaining continuous integration and delivery pipelines using industry-leading tools and frameworks such as Jenkins, GitLab CI/CD, and Ansible to automate manual processes, enabling faster and more reliable software releases.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Infrastructure as Code (IaC)</h5>
+                      <p class="card-text">Adept at using tools like Terraform to provision and manage infrastructure in a scalable and reproducible manner ensureing infrastructure changes are version-controlled, tested, and seamlessly integrated into the deployment pipeline.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Containerization and Orchestration</h5>
+                      <p class="card-text"> Experienced in container technologies such as Docker and container orchestration platforms like Kubernetes.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Collaboration and Communication</h5>
+                      <p class="card-text"> Adept at fostering collaboration between development and operations teams. I have effective communication skills and experience translating technical details into business-friendly language, and facilitating cross-functional collaboration to achieve organizational goals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Containerization and Orchestration</h5>
-              <p class="card-text"> Experienced in container technologies such as Docker and container orchestration platforms like Kubernetes.</p>
+            <br>
+            <h2 id="skills">Skills</h2>
+            <hr>
+            <div class="container">
+              <div class="row">
+                <div class="col-md">
+                  <h4>Programming Languages</h4>
+                  <ul>
+                    <% for (var i = 0; i < languages.length ; i++) { %>
+                      <li><%= languages[i] %></li>
+                    <% } %>
+                  </ul>
+                </div>
+                <div class="col-md">
+                  <h4>Infrastructure as Code</h4>
+                  <ul>
+                    <% for (var i = 0; i < iac.length ; i++) { %>
+                      <li><%= iac[i] %></li>
+                    <% } %>
+                  </ul>
+                </div>
+                <div class="col-md">
+                  <h4>CI/CD</h4>
+                  <ul>
+                    <% for (var i = 0; i < cicd.length ; i++) { %>
+                      <li><%= cicd[i] %></li>
+                    <% } %>
+                  </ul>
+                </div>
+                <div class="col-md">
+                  <h4>Other Skills</h4>
+                  <ul>
+                    <% for (var i = 0; i < other.length ; i++) { %>
+                      <li><%= other[i] %></li>
+                    <% } %>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Collaboration and Communication</h5>
-              <p class="card-text"> Adept at fostering collaboration between development and operations teams. I have effective communication skills and experience translating technical details into business-friendly language, and facilitating cross-functional collaboration to achieve organizational goals.</p>
+            <br>
+            <h2 id="projects">Projects</h2>
+            <hr>
+            <% for (var i = 0; i < rows.length ; i++) { %>
+              <div class="row">
+                <% for (var j = 0; j < rows[i].length ; j++) { %>
+                  <div class="card project-card">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= rows[i][j].name %></h5>
+                      <p class="card-text"><%= rows[i][j].description %></p>
+                      <a href="<%= rows[i][j].html_url %>" target="_blank" class="btn btn-primary">View on Github</a>
+                    </div>
+                  </div>
+                <% } %>
+              </div>
+            <% } %>
+            <br>
+            <h2 id="contact">Contact Me</h2>
+            <hr>
+            <p>
+              I am always interested in job opportunities and looking for new ways to expand my skillset. 
+              Please feel free to contact me by e-mail @ zach.smith2171@gmail.com or 
+              through <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">LinkedIn</a>.
+            </p>
+            <br>
+            <p>
+              Thanks again for visiting, I look forward to connecting soon :)
+            </p>
+            <div class="row">
+              <div class="col-sm">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">LinkedIn</h5>
+                    <p>Zach Smith</p>
+                    <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank" class="btn btn-primary">Connect</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">E-mail</h5>
+                    <p>zach.smith2171@gmail.com</p>
+                    <a href="mailto:zach.smith2171@gmail.com" target="_blank" class="btn btn-primary">Send e-mail</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <br>
+  <br>
 </main>
 
 <footer>
