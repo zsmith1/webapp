@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   lint: # this can be any name you choose
+    resource_class: medium+
     executor: node/default # use the default executor defined within the orb
     steps:
       - checkout
