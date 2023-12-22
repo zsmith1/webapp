@@ -18,19 +18,9 @@ async function fetchAllRepos(user) {
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  var rows = []
-  var repoData = []
   fetchAllRepos("zsmith1").then(repos => {
-    for (var i=0; i < repos.data.length; i++){
-      repoData.push(repos.data[i])
-      if (repoData.length == 3){
-        rows.push(repoData)
-        repoData = []
-      }
-    }
-    rows.push(repoData)
     res.render('pages/index', {
-      rows: rows,
+      repos: repos.data,
       languages: languages,
       iac: iac,
       cicd: cicd,
