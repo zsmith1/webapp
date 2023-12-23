@@ -115,19 +115,17 @@
             <br>
             <h2 id="projects">Projects</h2>
             <hr>
-            <% for (var i = 0; i < rows.length ; i++) { %>
-              <div class="row">
-                <% for (var j = 0; j < rows[i].length ; j++) { %>
-                  <div class="card project-card">
-                    <div class="card-body">
-                      <h5 class="card-title"><%= rows[i][j].name %></h5>
-                      <p class="card-text"><%= rows[i][j].description %></p>
-                      <a href="<%= rows[i][j].html_url %>" target="_blank" class="btn btn-primary">View on Github</a>
-                    </div>
+            <div class="row">
+              <% for (var i = 0; i < repos.length ; i++) { %>
+                <div class="card project-card">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= repos[i].name %></h5>
+                    <p class="card-text"><%= repos[i].description %></p>
+                    <a href="<%= repos[i].html_url %>" target="_blank" class="btn btn-primary">View on Github</a>
                   </div>
-                <% } %>
-              </div>
-            <% } %>
+                </div>
+              <% } %>
+            </div>
             <br>
             <h2 id="contact">Contact Me</h2>
             <hr>
@@ -141,25 +139,22 @@
               Thanks again for visiting, I look forward to connecting soon :)
             </p>
             <div class="row">
-              <div class="col-sm">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">LinkedIn</h5>
-                    <p>Zach Smith</p>
-                    <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank" class="btn btn-primary">Connect</a>
-                  </div>
+              <div class="card contact-card">
+                <div class="card-body">
+                  <h5 class="card-title">LinkedIn</h5>
+                  <p>Zach Smith</p>
+                  <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank" class="btn btn-primary">Connect</a>
                 </div>
               </div>
-              <div class="col-sm">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">E-mail</h5>
-                    <p>zach.smith2171@gmail.com</p>
-                    <a href="mailto:zach.smith2171@gmail.com" target="_blank" class="btn btn-primary">Send e-mail</a>
-                  </div>
+              <div class="card contact-card">
+                <div class="card-body">
+                  <h5 class="card-title">E-mail</h5>
+                  <p>zach.smith2171@gmail.com</p>
+                  <a href="mailto:zach.smith2171@gmail.com" target="_blank" class="btn btn-primary">Send e-mail</a>
                 </div>
               </div>
             </div>
+            <br>
           </div>
         </div>
       </div>
