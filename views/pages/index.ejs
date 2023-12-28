@@ -76,45 +76,82 @@
             <br>
             <h2 id="skills">Skills</h2>
             <hr>
-            <div class="container">
-              <div class="row">
-                <div class="col-md">
-                  <h4>Programming Languages</h4>
-                  <ul>
-                    <% for (var i = 0; i < languages.length ; i++) { %>
-                      <li><%= languages[i] %></li>
-                    <% } %>
-                  </ul>
-                </div>
-                <div class="col-md">
-                  <h4>Infrastructure as Code</h4>
-                  <ul>
-                    <% for (var i = 0; i < iac.length ; i++) { %>
-                      <li><%= iac[i] %></li>
-                    <% } %>
-                  </ul>
-                </div>
-                <div class="col-md">
-                  <h4>CI/CD</h4>
-                  <ul>
-                    <% for (var i = 0; i < cicd.length ; i++) { %>
-                      <li><%= cicd[i] %></li>
-                    <% } %>
-                  </ul>
-                </div>
-                <div class="col-md">
-                  <h4>Other Skills</h4>
-                  <ul>
-                    <% for (var i = 0; i < other.length ; i++) { %>
-                      <li><%= other[i] %></li>
-                    <% } %>
-                  </ul>
+            <p>
+              I am always trying to stay up to date with current and emerging technologies related to ci/cd and testing. Below are some skills listed that I feel confident showcasing.
+            </p>
+            <hr>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Programming Languages
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < languages.length ; i++) { %>
+                        <li><%= languages[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Infrastructure as Code
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < iac.length ; i++) { %>
+                        <li><%= iac[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    CI/CD
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < cicd.length ; i++) { %>
+                        <li><%= cicd[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    Other Skills
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < other.length ; i++) { %>
+                        <li><%= other[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div> 
             <br>
             <h2 id="projects">Projects</h2>
             <hr>
+            <p>
+              Most of my experience has come through mu professional carreer, however I've recently tried to start working on some personal projects to be used as evidence for some of my skills listed above.
+            </p>
             <div class="row">
               <% for (var i = 0; i < repos.length ; i++) { %>
                 <div class="card project-card">
