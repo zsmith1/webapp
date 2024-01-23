@@ -26,6 +26,7 @@ jobs:
           name: Build and push docker image
           command: | 
             docker build -t zsmith2171/webapp:latest "."
+            echo $API_TOKEN	| docker login -u $USERNAME --password-stdin
             docker push zsmith2171/webapp:latest
 workflows:
   update_my_app:
