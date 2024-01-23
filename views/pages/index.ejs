@@ -131,11 +131,27 @@
               </div> 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Testing
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < testing.length ; i++) { %>
+                        <li><%= testing[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                     Other Skills
                   </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <ul>
                       <% for (var i = 0; i < other.length ; i++) { %>

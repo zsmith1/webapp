@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   node: circleci/node@5.0.2
-  eb: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
   lint: # this can be any name you choose
@@ -14,19 +13,23 @@ jobs:
       - run:
           command: npm run lint
           name: Run Linter
-
+  build:
+    docker:
+      - image: cimg/base:2022.09
+        auth:
+          username: $USERNAME
+          password: $API_TOKEN
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build and push docker image
+          command: | 
+            docker build -t zsmith2171/webapp:latest "."
+            docker push zsmith2171/webapp:latest
 workflows:
-  test_my_app:
+  update_my_app:
     jobs:
       - lint
-      - eb/deploy:
-          context: aws
-          application-name: $APP
-          environment-name: $ENV
-          filters:
-            branches:
-              only:
-                - main
-          label: version-<<pipeline.number>>
-          requires:
-            - lint
+      - build:
+          context: dockerhub
