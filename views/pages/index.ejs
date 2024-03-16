@@ -33,51 +33,19 @@
             <h2 id="bio">Bio</h2>
             <hr>
             <p>
-              As a seasoned software developer in DevOps, I am a results-driven professional with a proven track record of optimizing and automating processes to improve productivity and throughput. 
-              With a strong background in both software development and quality assurance, I am dedicated to bridging the gap between development and IT teams, fostering collaboration, and implementing robust solutions that drive organizational success.
+              I am a results-driven DevOps Engineer with a passion for building and maintaining robust infrastructure solutions. With a strong foundation in automation tools, cloud technologies, and CI/CD pipelines, I bring over 3 years of experience in optimizing workflows and enhancing system reliability. 
+              <br/>
+              <br/>
+              Now, I am eager to pivot my skills towards Full Stack Development or Automation Development roles, with a long-term goal of transitioning into project management. My aim is to blend my expertise in infrastructure management with my love for crafting innovative software solutions, ultimately leading teams to deliver exceptional projects on time and within budget. 
+              <br/>
+              <br/>
+              Let's collaborate to bring efficiency, scalability, and excellence to your projects!
             </p>
-            <hr>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">DevOps and Automation</h5>
-                      <p class="card-text">Proficient in designing, implementing, and maintaining continuous integration and delivery pipelines using industry-leading tools and frameworks such as Jenkins, GitLab CI/CD, and Ansible to automate manual processes, enabling faster and more reliable software releases.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Infrastructure as Code (IaC)</h5>
-                      <p class="card-text">Adept at using tools like Terraform to provision and manage infrastructure in a scalable and reproducible manner ensureing infrastructure changes are version-controlled, tested, and seamlessly integrated into the deployment pipeline.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Containerization and Orchestration</h5>
-                      <p class="card-text"> Experienced in container technologies such as Docker and container orchestration platforms like Kubernetes.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Collaboration and Communication</h5>
-                      <p class="card-text"> Adept at fostering collaboration between development and operations teams. I have effective communication skills and experience translating technical details into business-friendly language, and facilitating cross-functional collaboration to achieve organizational goals.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <br>
             <h2 id="skills">Skills</h2>
             <hr>
             <p>
-              I am always trying to stay up to date with current and emerging technologies related to ci/cd and testing. Below are some skills listed that I feel confident showcasing.
+              I am always trying to stay up to date with current and emerging technologies related to ci/cd, testing and Full Stack Development. Below are some skills listed that I feel confident showcasing.
             </p>
             <hr>
             <div class="accordion" id="accordionExample">
@@ -115,11 +83,27 @@
               </div> 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    CI/CD
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Containerization
                   </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < containerization.length ; i++) { %>
+                        <li><%= containerization[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    CI/CD
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <ul>
                       <% for (var i = 0; i < cicd.length ; i++) { %>
@@ -131,11 +115,11 @@
               </div> 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                     Testing
                   </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <ul>
                       <% for (var i = 0; i < testing.length ; i++) { %>
@@ -147,11 +131,11 @@
               </div> 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                     Other Skills
                   </button>
                 </h2>
-                <div id="collapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapseSix" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <ul>
                       <% for (var i = 0; i < other.length ; i++) { %>
@@ -166,7 +150,7 @@
             <h2 id="projects">Projects</h2>
             <hr>
             <p>
-              Most of my experience has come through mu professional carreer, however I've recently tried to start working on some personal projects to be used as evidence for some of my skills listed above.
+              Most of my experience has come through my professional carreer, however I've recently tried to start working on some personal projects to be used as evidence for some of my skills listed above.
             </p>
             <div class="row">
               <% for (var i = 0; i < repos.length ; i++) { %>

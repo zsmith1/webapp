@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-const languages = ["Python", "SQL", "Java", "Javascript", "Go"];
-const iac = ["Ansible", "Terraform", "AWS/Azure"];
-const cicd = ["Gitlab CI", "CircleCI", "Jenkins", "AgroCD"]
-const testing = ["Spock", "Pytest", "Selenium/Geb", "Behave"]
-const other =["Kubernetes", "Docker", "Git", "Agile Development", "Trunk-based Development", "Jira/Confluence", "Grafana", "ELK Stack"];
+const languages = ["Python", "SQL", "Java", "Javascript", "Typescript", "Go"];
+const iac = ["Ansible", "Terraform", "AWS", "Azure"];
+const cicd = ["Gitlab CI", "CircleCI", "Jenkins", "ArgoCD"]
+const testing = ["Spock", "Pytest", "Selenium", "Geb", "Behave", "Jest"]
+const containerization = ["Kubernetes", "Docker"]
+const other =["Git", "Agile Development", "Trunk-based Development", "Jira/Confluence", "Grafana", "ELK Stack", "REST APIs"];
 
 const { Octokit } = require("@octokit/core");
 const octokit = new Octokit()
@@ -38,6 +39,7 @@ router.get('/', async function(req, res) {
     iac: iac,
     cicd: cicd,
     testing: testing,
+    containerization: containerization,
     other: other
   });
 });
