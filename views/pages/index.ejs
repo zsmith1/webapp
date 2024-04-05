@@ -8,7 +8,7 @@
   <div class="scroll-section">
     <div class="container">
       <h1>Zach Smith</h1>
-      <p>DevOps Engineer</p>
+      <p>DevOps/Backend/Full-Stack Developer</p>
       <div class="row">
         <div class="col-4">
           <div id="sidebar" class="list-group">
@@ -100,7 +100,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    CI/CD
+                    CI/CD & Monitoring
                   </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -128,14 +128,30 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Web Development
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <% for (var i = 0; i < webDev.length ; i++) { %>
+                        <li><%= webDev[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
               </div> 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                     Other Skills
                   </button>
                 </h2>
-                <div id="collapseSix" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapseSeven" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <ul>
                       <% for (var i = 0; i < other.length ; i++) { %>
