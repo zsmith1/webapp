@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 const languages = ["Python", "SQL", "Java", "Javascript", "Typescript", "Go"];
-const iac = ["Ansible", "Terraform", "AWS", "Azure"];
+const iac = ["Ansible", "Terraform/OpenTofu", "AWS", "Azure"];
 const cicd = ["Gitlab CI", "CircleCI", "Jenkins", "ArgoCD", "Prometheus", "Grafana", "ELK"];
 const testing = ["Spock", "Pytest", "Selenium", "Geb", "Behave", "Jest"];
 const containerization = ["Kubernetes", "Docker"];
-const webDev = ["Django", "Express", "Flask", "HTML", "EJS"];
+const webDev = ["Django", "Express", "Flask", "HTML", "EJS", "Render", "Vercel", "Supabase"];
 const other =["Git/Github/Gitlab", "Agile Development/Scrum", "Trunk-based Development", "Jira/Confluence"];
 
 const { Octokit } = require("@octokit/core");
