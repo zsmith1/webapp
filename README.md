@@ -1,11 +1,5 @@
-# web-app
+# Mantine Next Template
 
-This is a NodeJS web application using [express](https://expressjs.com/) and [ejs templating](https://ejs.co/)
+Get started with the template by clicking `Use this template` button on the top of the page.
 
-## CI/CD
-This project uses [Circle CI](https://circleci.com/) for CI/CD
-
-## Developer Guide
-
-npm install
-npm run start
+[Documentation](https://mantine.dev/guides/next/)

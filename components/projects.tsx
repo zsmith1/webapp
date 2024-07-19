@@ -1,0 +1,29 @@
+import { useRef } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
+import { Carousel } from '@mantine/carousel';
+import { fetchAllRepos } from '../lib/github'
+import { ProjectCard } from './projectCard';
+
+
+export async function ProjectCarousel() {
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
+  const repos = await fetchAllRepos('zsmith1')
+
+  return (
+    <Carousel
+      withIndicators
+      plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset}
+      slideSize="50%"
+      slidesToScroll={2}
+    >
+      {repos.data.map(repo => {
+        return (
+          <Carousel.Slide key={repo.name}>
+            <ProjectCard repo={repo} />
+          </Carousel.Slide>
+        )})}
+    </Carousel>
+  );
+}

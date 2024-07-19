@@ -1,60 +1,36 @@
 {
-  "name": "nodejs-example-express-rds",
-  "version": "0.0.0",
+  "name": "mantine-minimal-next-template",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www --max-http-header-size=16384",
-    "test": "echo 'test'",
-    "build": "echo 'build'",
-    "lint": "eslint \"./**/*.js\" --quiet",
-    "lintFull": "eslint \"./**/*.js\"",
-    "lintFix": "eslint --fix './**/*.js'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "http-errors": "~1.6.3",
-    "jade": "^0.29.0",
-    "jade-bootstrap": "^1.0.14",
-    "morgan": "~1.9.1",
-    "node-schedule": "^2.1.1",
-    "octokit": "^3.1.2"
+    "@mantine/carousel": "^7.11.2",
+    "@mantine/core": "7.11.2",
+    "@mantine/hooks": "7.11.2",
+    "@octokit/core": "^6.1.2",
+    "@tabler/icons": "^3.11.0",
+    "@tabler/icons-react": "^3.11.0",
+    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-react": "^7.1.0",
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
-    "eslint": "^8.55.0"
+    "@types/node": "20.14.8",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "1.16.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "5.5.2"
   },
-  "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "es6": true,
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 8
-    },
-    "rules": {
-      "brace-style": [
-        "error",
-        "stroustrup"
-      ],
-      "comma-dangle": [
-        "error",
-        "never"
-      ],
-      "no-unused-vars": [
-        "warn"
-      ],
-      "no-var": [
-        "off"
-      ],
-      "one-var": [
-        "off"
-      ]
-    }
-  }
+  "packageManager": "yarn@4.3.1"
 }
