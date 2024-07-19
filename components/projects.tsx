@@ -3,7 +3,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
 import { fetchAllRepos } from '../lib/github'
 import { ProjectCard } from './projectCard';
-
+import { Repository } from '../lib/interfaces'
 
 export async function ProjectCarousel() {
   const autoplay = useRef(Autoplay({ delay: 3000 }));
@@ -18,10 +18,10 @@ export async function ProjectCarousel() {
       slideSize="50%"
       slidesToScroll={2}
     >
-      {repos.data.map(repo => {
+      {repos.data.map((repo: Repository) => {
         return (
           <Carousel.Slide key={repo.name}>
-            <ProjectCard repo={repo} />
+            <ProjectCard name={repo.name} html_url={repo.html_url} description={repo.description} />
           </Carousel.Slide>
         )})}
     </Carousel>

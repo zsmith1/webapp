@@ -15,7 +15,7 @@ export default function HomePage() {
       <AppShell.Header>
         <Grid>
           <Grid.Col span={6} offset={3}>
-            <Group align="center" justify='space-between'>
+            <Group align="center" justify="space-between">
               <Title>Zach Smith</Title>
               <Group align="center">
                 <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
@@ -38,13 +38,15 @@ export default function HomePage() {
         <Container>
           <Title>Bio</Title>
           <Space h="sm" />
-          <Text>I am currently a Full-Stack Developer with a strong foundation in automation tools, cloud technologies, and CI/CD pipelines, I bring over 4 years of experience in optimizing workflows and automating tasks for enhanced efficiency. 
-              <br/>
-              <br/>
-              Now, I am eager to expand my knowledge, with a long-term goal of transitioning into project management. My aim is to blend my expertise in infrastructure management with my love for crafting innovative software solutions, ultimately leading teams to deliver exceptional projects on time and within budget. 
-              <br/>
-              <br/>
-              Let's collaborate to bring efficiency, scalability, and excellence to your projects!</Text>
+          <Text>
+            I am currently a Full-Stack Developer with a strong foundation in automation tools, cloud technologies, and CI/CD pipelines, I bring over 4 years of experience in optimizing workflows and automating tasks for enhanced efficiency. 
+            <br/>
+            <br/>
+            Now, I am eager to expand my knowledge, with a long-term goal of transitioning into project management. My aim is to blend my expertise in infrastructure management with my love for crafting innovative software solutions, ultimately leading teams to deliver exceptional projects on time and within budget. 
+            <br/>
+            <br/>
+            Let&apos;s collaborate to bring efficiency, scalability, and excellence to your projects!
+          </Text>
         </Container>
         <Space h="sm" />
         <Container>
