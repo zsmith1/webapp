@@ -1,5 +1,14 @@
-# Mantine Next Template
+# Webapp
 
-Get started with the template by clicking `Use this template` button on the top of the page.
+This webapp uses nextjs + mantine components.
 
-[Documentation](https://mantine.dev/guides/next/)
+## Developer Guide
+
+To run the app: `npm run dev`
+
+To build: `npm run build`
+
+
+## Infrastructure
+
+This app is hosted on Vercel
