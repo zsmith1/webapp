@@ -1,37 +1,34 @@
 "use client";
 
 import { AppShell, Container, Grid, Title, Group, Space, Text } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import {  IconBrandLinkedin, IconBrandGithub, IconMail } from '@tabler/icons-react';
 
 import { ProjectCarousel } from '../components/projects';
 import { Skills } from '../components/skills';
 
 export default function HomePage() {
+  const [opened, { toggle }] = useDisclosure();
   return (
     <AppShell
       header={{ height: 60 }}
       padding="md"
     >
       <AppShell.Header>
-        <Grid>
-          <Grid.Col span={6} offset={3}>
-            <Group align="center" justify="space-between">
-              <Title>Zach Smith</Title>
-              <Group align="center">
-                <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
-                  <IconBrandLinkedin size={40} stroke={2}/>
-                </a>
-                <a href="https://github.com/zsmith1" target="_blank">
-                  <IconBrandGithub size={40} stroke={2}/>
-                </a>
-                <a href="mailto:zach.smith2171@gmail.com/" target="_blank">
-                  <IconMail size={40} stroke={2}/>
-                </a>
-              </Group>
-            </Group>
-          </Grid.Col>
-          <Grid.Col span={3}/>
-        </Grid>
+        <Container>
+          <Group justify='center'>
+            <Title>Zach Smith</Title>
+            <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
+              <IconBrandLinkedin size={40} stroke={2}/>
+            </a>
+            <a href="https://github.com/zsmith1" target="_blank">
+              <IconBrandGithub size={40} stroke={2}/>
+            </a>
+            <a href="mailto:zach.smith2171@gmail.com/" target="_blank">
+              <IconMail size={40} stroke={2}/>
+            </a>
+          </Group>
+        </Container>
       </AppShell.Header>
 
       <AppShell.Main>
