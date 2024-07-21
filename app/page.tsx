@@ -1,33 +1,33 @@
 "use client";
 
-import { AppShell, Container, Grid, Title, Group, Space, Text } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { AppShell, Container, Title, Group, Space, Text, Stack } from '@mantine/core';
 import {  IconBrandLinkedin, IconBrandGithub, IconMail } from '@tabler/icons-react';
 
 import { ProjectCarousel } from '../components/projects';
 import { Skills } from '../components/skills';
 
 export default function HomePage() {
-  const [opened, { toggle }] = useDisclosure();
   return (
     <AppShell
-      header={{ height: 60 }}
+      header={{ height: 100 }}
       padding="md"
     >
       <AppShell.Header>
         <Container>
-          <Group justify='center'>
+          <Stack align='center' justify='center'>
             <Title>Zach Smith</Title>
-            <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
-              <IconBrandLinkedin size={40} stroke={2}/>
-            </a>
-            <a href="https://github.com/zsmith1" target="_blank">
-              <IconBrandGithub size={40} stroke={2}/>
-            </a>
-            <a href="mailto:zach.smith2171@gmail.com/" target="_blank">
-              <IconMail size={40} stroke={2}/>
-            </a>
-          </Group>
+            <Group justify='center'>
+              <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
+                <IconBrandLinkedin size={36} stroke={2}/>
+              </a>
+              <a href="https://github.com/zsmith1" target="_blank">
+                <IconBrandGithub size={36} stroke={2}/>
+              </a>
+              <a href="mailto:zach.smith2171@gmail.com/" target="_blank">
+                <IconMail size={36} stroke={2}/>
+              </a>
+            </Group>
+          </Stack>
         </Container>
       </AppShell.Header>
 
