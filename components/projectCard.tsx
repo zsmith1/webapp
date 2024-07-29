@@ -1,5 +1,5 @@
 import { Card, Text } from '@mantine/core';
-import { Repository } from '../lib/interfaces'
+import { Repository } from '../lib/interfaces';
 
 export function ProjectCard(repo: Repository) {
     return (

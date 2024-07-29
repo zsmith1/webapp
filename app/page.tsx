@@ -2,6 +2,7 @@
 
 import { AppShell, Container, Title, Group, Space, Text, Stack } from '@mantine/core';
 import {  IconBrandLinkedin, IconBrandGithub, IconMail } from '@tabler/icons-react';
+import { motion } from "framer-motion"
 
 import { ProjectCarousel } from '../components/projects';
 import { Skills } from '../components/skills';
@@ -18,13 +19,19 @@ export default function HomePage() {
             <Title>Zach Smith</Title>
             <Group justify='center'>
               <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
-                <IconBrandLinkedin size={36} stroke={2}/>
+                <motion.div whileHover={{ scale: 1.2 }}>
+                  <IconBrandLinkedin size={36} stroke={2}/>
+                </motion.div>
               </a>
               <a href="https://github.com/zsmith1" target="_blank">
-                <IconBrandGithub size={36} stroke={2}/>
+                <motion.div whileHover={{ scale: 1.2 }}>
+                  <IconBrandGithub size={36} stroke={2}/>
+                </motion.div>
               </a>
               <a href="mailto:zach.smith2171@gmail.com/" target="_blank">
-                <IconMail size={36} stroke={2}/>
+                <motion.div whileHover={{ scale: 1.2 }}>
+                  <IconMail size={36} stroke={2}/>
+                </motion.div>
               </a>
             </Group>
           </Stack>
