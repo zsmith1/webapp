@@ -18,19 +18,19 @@ export default function HomePage() {
           <Stack align='center' justify='center'>
             <Title>Zach Smith</Title>
             <Group justify='center'>
-              <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank">
+              <a href="https://www.linkedin.com/in/zach-s-smith/" target="_blank" style={{color: "inherit", textDecoration: "none"}}>
                 <motion.div whileHover={{ scale: 1.2 }}>
-                  <IconBrandLinkedin size={36} stroke={2}/>
+                  <IconBrandLinkedin size={36} stroke={2} color='#0a66c2'/>
                 </motion.div>
               </a>
-              <a href="https://github.com/zsmith1" target="_blank">
+              <a href="https://github.com/zsmith1" target="_blank" style={{color: "inherit", textDecoration: "none"}}>
                 <motion.div whileHover={{ scale: 1.2 }}>
-                  <IconBrandGithub size={36} stroke={2}/>
+                  <IconBrandGithub size={36} stroke={2} color='#181717'/>
                 </motion.div>
               </a>
-              <a href="mailto:zach.smith2171@gmail.com/" target="_blank">
+              <a href="mailto:zach.smith2171@gmail.com/" target="_blank" style={{color: "inherit", textDecoration: "none"}}>
                 <motion.div whileHover={{ scale: 1.2 }}>
-                  <IconMail size={36} stroke={2}/>
+                  <IconMail size={36} stroke={2} color='#dc4e41'/>
                 </motion.div>
               </a>
             </Group>
@@ -43,13 +43,14 @@ export default function HomePage() {
           <Title>Bio</Title>
           <Space h="sm" />
           <Text>
-            I am currently a Full-Stack Developer with a strong foundation in automation tools, cloud technologies, and CI/CD pipelines, I bring over 4 years of experience in optimizing workflows and automating tasks for enhanced efficiency. 
+            Welcome to my portfolio! I am currently a Full-Stack Developer with extensive experience in back-end development and continuous integration, I offer a diverse range of skills and expertise. I have over 4 years of experience in optimizing workflows and automating tasks for increased efficiency.
             <br/>
             <br/>
-            Now, I am eager to expand my knowledge, with a long-term goal of transitioning into project management. My aim is to blend my expertise in infrastructure management with my love for crafting innovative software solutions, ultimately leading teams to deliver exceptional projects on time and within budget. 
+            I specialize in automation tools, CI/CD, testing using frameworks such as Selenium and server-side solutions using modern technologies such as Python and Node.js.
             <br/>
             <br/>
-            Let&apos;s collaborate to bring efficiency, scalability, and excellence to your projects!
+            I am eager to expand my skill set to include front-end development, seeking to blend my strong back-end and continuous integration expertise with user interfaces to create well-rounded and impactful solutions.
+            <br/>
           </Text>
         </Container>
         <Space h="sm" />
