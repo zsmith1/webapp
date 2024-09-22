@@ -15,8 +15,7 @@ export async function ProjectCarousel() {
       plugins={[autoplay.current]}
       onMouseEnter={autoplay.current.stop}
       onMouseLeave={autoplay.current.reset}
-      slideSize="50%"
-      slidesToScroll={2}
+      slidesToScroll={1}
     >
       {repos.data.map((repo: Repository) => {
         return (
