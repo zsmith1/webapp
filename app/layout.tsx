@@ -1,18 +1,32 @@
-import "@mantine/core/styles.css";
-import '@mantine/carousel/styles.css';
-import React from "react";
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
-import { theme } from "../theme";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-export default function RootLayout({ children }: { children: any }) {
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Zach Smith Portfolio",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <head>
-        <ColorSchemeScript />
-        <title>Zach Smith Portfolio</title>
-      </head>
-      <body>
-        <MantineProvider theme={theme} defaultColorScheme="dark">{children}</MantineProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

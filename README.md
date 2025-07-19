@@ -1,6 +1,6 @@
 # Webapp
 
-This webapp uses nextjs + mantine components.
+This webapp uses nextjs + shadcn/ui components.
 
 ## Developer Guide
 

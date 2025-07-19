@@ -1,7 +1,7 @@
-const { Octokit } = require("@octokit/core");
+const { Octokit } = require("@octokit/core"); // eslint-disable-line no-require-imports
 const octokit = new Octokit()
 
-export async function fetchAllRepos(user: String) {
+export async function fetchAllRepos(user: string) {
   const result = await octokit.request('GET /users/{user}/repos', {
       user: user
   });
