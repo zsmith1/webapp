@@ -53,28 +53,30 @@ export default function HomePage() {
             Full-Stack Developer specializing in automation, CI/CD, and modern web technologies
           </p>
 
-          {/* Social links with modern styling */}
-          <div className="flex justify-center gap-6 animate-in slide-in-from-bottom-4 duration-1000 delay-700">
-            {socialLinks.map((link) => {
-              const IconComponent = link.icon;
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group p-4 rounded-2xl border border-border/50 backdrop-blur-sm transition-all duration-300 ${link.color} ${link.bgColor} hover:shadow-lg hover:shadow-current/10 hover:-translate-y-1`}
-                  aria-label={link.label}
-                >
-                  <IconComponent size={28} />
-                </a>
-              );
-            })}
-          </div>
+          <div className="relative pb-20">
+            {/* Social links */}
+            <div className="flex justify-center gap-6 animate-in slide-in-from-bottom-4 duration-1000 delay-700">
+              {socialLinks.map((link) => {
+                const IconComponent = link.icon;
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group p-4 rounded-2xl border border-border/50 backdrop-blur-sm transition-all duration-300 ${link.color} ${link.bgColor} hover:shadow-lg hover:shadow-current/10 hover:-translate-y-1`}
+                    aria-label={link.label}
+                  >
+                    <IconComponent size={28} />
+                  </a>
+                );
+              })}
+            </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animate-in fade-in duration-1000 delay-1000">
-            <ArrowDown className="text-muted-foreground/60" size={24} />
+            {/* Scroll indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce animate-in fade-in duration-1000 delay-1000">
+              <ArrowDown className="text-muted-foreground/60" size={28} />
+            </div>
           </div>
         </div>
       </header>
