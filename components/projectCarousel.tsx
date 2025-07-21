@@ -25,7 +25,6 @@ export function ProjectCarousel({ repos }: ProjectCarouselProps) {
       stopOnFocusIn: true,
     })
   );
-
   const [isPlaying, setIsPlaying] = useState(true);
 
   const toggleAutoplay = () => {
@@ -40,7 +39,7 @@ export function ProjectCarousel({ repos }: ProjectCarouselProps) {
   return (
     <div className="relative w-full">
       {/* Carousel Container */}
-      <div className="bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 p-6 shadow-md">
+      <div className="bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 p-8 shadow-lg hover:shadow-xl hover:bg-card/40 transition-all duration-500 hover:-translate-y-1">
         <Carousel
           opts={{
             align: 'center',
@@ -67,42 +66,42 @@ export function ProjectCarousel({ repos }: ProjectCarouselProps) {
               </CarouselItem>
             ))}
           </CarouselContent>
-
-          {/* Custom Navigation */}
-          <CarouselPrevious className="border-border/50 bg-card/70 backdrop-blur-md hover:bg-card transition-colors duration-200 rounded-full" />
-          <CarouselNext className="border-border/50 bg-card/70 backdrop-blur-md hover:bg-card transition-colors duration-200 rounded-full" />
+          
+          {/* Enhanced Navigation */}
+          <CarouselPrevious className="border-border/50 bg-card/50 backdrop-blur-md hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 hover:border-blue-500/30 hover:scale-110 transition-all duration-300 rounded-full shadow-lg" />
+          <CarouselNext className="border-border/50 bg-card/50 backdrop-blur-md hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 hover:border-blue-500/30 hover:scale-110 transition-all duration-300 rounded-full shadow-lg" />
         </Carousel>
 
-        {/* Play/Pause Button */}
-        <div className="flex justify-center mt-6">
+        {/* Enhanced Play/Pause Button */}
+        <div className="flex justify-center mt-8">
           <Button
             variant="ghost"
             size="sm"
             onClick={toggleAutoplay}
-            className="rounded-xl bg-card/70 backdrop-blur-sm border border-border/50 hover:bg-card transition-all duration-200 shadow-sm"
+            className="group rounded-2xl bg-gradient-to-r from-card/70 to-card/50 backdrop-blur-sm border border-border/50 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 hover:border-blue-500/30 hover:shadow-lg hover:scale-105 transition-all duration-300 px-6 py-3 text-sm font-medium"
             aria-label={isPlaying ? 'Pause carousel' : 'Play carousel'}
           >
             {isPlaying ? (
               <>
-                <Pause className="h-4 w-4 mr-2" />
-                Pause
+                <Pause className="h-4 w-4 mr-2 group-hover:text-blue-500 transition-colors duration-300" />
+                <span className="group-hover:text-foreground transition-colors duration-300">Pause</span>
               </>
             ) : (
               <>
-                <Play className="h-4 w-4 mr-2" />
-                Play
+                <Play className="h-4 w-4 mr-2 group-hover:text-blue-500 transition-colors duration-300" />
+                <span className="group-hover:text-foreground transition-colors duration-300">Play</span>
               </>
             )}
           </Button>
         </div>
       </div>
 
-      {/* Dot Indicators */}
-      <div className="flex justify-center mt-4 space-x-2">
+      {/* Enhanced Dot Indicators */}
+      <div className="flex justify-center mt-6 space-x-3">
         {repos.map((_, index) => (
           <div
             key={index}
-            className="w-2 h-2 rounded-full bg-muted-foreground/30 hover:bg-muted-foreground transition-all duration-300"
+            className="w-3 h-3 rounded-full bg-muted-foreground/20 border border-border/30 hover:bg-gradient-to-r hover:from-blue-500/30 hover:to-purple-500/30 hover:border-blue-500/50 hover:scale-125 transition-all duration-300 cursor-pointer"
           />
         ))}
       </div>

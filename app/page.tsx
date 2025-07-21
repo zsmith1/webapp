@@ -1,7 +1,8 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Mail, ArrowDown } from 'lucide-react'
-import { ProjectCarouselWrapper } from '../components/projectCarouselWrapper';
-import { Skills } from '../components/skills';
+import { ProjectCarouselWrapper } from '@/components/projectCarouselWrapper';
+import { Skills } from '@/components/skills';
+import { ThemeToggle } from '@/components/themeToggle';
 
 export default function HomePage() {
   const socialLinks = [
@@ -30,6 +31,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      {/* Theme Toggle Button */}
+      <div className="fixed top-6 right-6 z-50">
+        <ThemeToggle />
+      </div>
+
       {/* Hero Section */}
       <header className="relative min-h-screen flex flex-col items-center justify-center px-4">
         {/* Animated background elements */}

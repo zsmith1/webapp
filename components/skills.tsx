@@ -54,24 +54,32 @@ export function Skills() {
   ];
 
   return (
-    <Accordion type="multiple" className="w-full space-y-2">
+    <Accordion type="multiple" className="w-full space-y-4">
       {skillCategories.map((category) => {
         const IconComponent = category.icon;
         return (
-          <AccordionItem key={category.id} value={category.id} className="border rounded-lg px-4">
-            <AccordionTrigger className="hover:no-underline">
-              <div className="flex items-center gap-3">
-                <IconComponent className="h-5 w-5 text-primary" />
-                <span className="font-medium text-left">{category.title}</span>
+          <AccordionItem 
+            key={category.id} 
+            value={category.id} 
+            className="border border-border/50 rounded-2xl px-6 bg-card/30 backdrop-blur-sm hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          >
+            <AccordionTrigger className="hover:no-underline py-6">
+              <div className="flex items-center gap-4">
+                <div className="p-2 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-border/30">
+                  <IconComponent className="h-5 w-5 text-blue-500" />
+                </div>
+                <span className="font-semibold text-left text-lg hover:text-blue-500 transition-colors duration-300">
+                  {category.title}
+                </span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="pb-4">
-              <div className="flex flex-wrap gap-2 mt-2">
+            <AccordionContent className="pb-6 pt-2">
+              <div className="flex flex-wrap gap-3 mt-4">
                 {category.skills.map((skill) => (
-                  <Badge 
-                    key={skill} 
-                    variant="secondary" 
-                    className="text-sm font-normal"
+                  <Badge
+                    key={skill}
+                    variant="secondary"
+                    className="text-sm font-medium px-4 py-2 rounded-xl bg-gradient-to-r from-muted/50 to-muted/30 border border-border/40 hover:border-border hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 hover:text-foreground hover:scale-105 transition-all duration-300 cursor-default"
                   >
                     {skill}
                   </Badge>
