@@ -13,7 +13,7 @@ export function Skills() {
       id: "languages",
       title: "Programming Languages",
       icon: Code2,
-      skills: ["Python", "SQL", "Java", "Javascript", "Typescript", "Go"],
+      skills: ["Python", "SQL", "Java", "Javascript", "Typescript"],
     },
     {
       id: "iac",
@@ -25,7 +25,7 @@ export function Skills() {
       id: "cicd",
       title: "CI/CD & DevOps",
       icon: Workflow,
-      skills: ["Gitlab CI", "CircleCI", "Jenkins", "ArgoCD", "Prometheus", "Grafana", "ELK"],
+      skills: ["Gitlab CI", "CircleCI", "Prometheus", "Grafana", "ELK"],
     },
     {
       id: "testing",
@@ -43,7 +43,7 @@ export function Skills() {
       id: "webdev",
       title: "Web Development",
       icon: Globe,
-      skills: ["Django", "Express", "Flask", "HTML", "EJS", "Render", "Vercel", "Supabase"],
+      skills: ["Django", "Express", "Flask", "HTML", "Next.js", "Render", "Vercel", "Supabase"],
     },
     {
       id: "other",

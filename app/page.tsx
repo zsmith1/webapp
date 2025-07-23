@@ -3,8 +3,10 @@ import { Mail, ArrowDown } from 'lucide-react'
 import { ProjectCarouselWrapper } from '@/components/projectCarouselWrapper';
 import { Skills } from '@/components/skills';
 import { ThemeToggle } from '@/components/themeToggle';
+import { getYearsOfExperience } from '@/lib/utils';
 
 export default function HomePage() {
+  const years = getYearsOfExperience('2020-09-01');
   const socialLinks = [
     {
       href: 'https://www.linkedin.com/in/zach-s-smith/',
@@ -98,13 +100,13 @@ export default function HomePage() {
             <div className="grid gap-8 md:gap-12">
               <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                 <p className="hover:text-foreground transition-colors duration-300 p-6 rounded-2xl hover:bg-card/50 border border-transparent hover:border-border/50">
-                  Welcome to my portfolio! I am currently a Full-Stack Developer with extensive experience in back-end development and continuous integration. I offer a diverse range of skills and expertise with over 4 years of experience in optimizing workflows and automating tasks for increased efficiency.
+                  Welcome to my portfolio! I am currently a Data Engineer with a strong full-stack development background and extensive experience in back-end development and continuous integration. I offer a diverse range of skills and expertise with over {years} years of experience in optimizing workflows and automating tasks for increased efficiency.
                 </p>
                 <p className="hover:text-foreground transition-colors duration-300 p-6 rounded-2xl hover:bg-card/50 border border-transparent hover:border-border/50">
-                  I specialize in automation tools, CI/CD, testing using frameworks such as Selenium and server-side solutions using modern technologies such as Python and Node.js.
+                  I specialize in automation tools, CI/CD, infrastructure management, testing using frameworks such as Selenium, and server-side solutions using modern technologies such as Python and Node.js.
                 </p>
                 <p className="hover:text-foreground transition-colors duration-300 p-6 rounded-2xl hover:bg-card/50 border border-transparent hover:border-border/50">
-                  I am eager to expand my skill set to include front-end development, seeking to blend my strong back-end and continuous integration expertise with user interfaces to create well-rounded and impactful solutions.
+                  I am passionate about expanding my expertise in artificial intelligence while continuing to refine my core skills in automation, infrastructure, and data engineering to create innovative and impactful solutions.
                 </p>
               </div>
             </div>
@@ -112,7 +114,7 @@ export default function HomePage() {
         </section>
 
         {/* Skills Section */}
-        <section className="container mx-auto px-4 py-20 bg-card/20">
+        <section className="container mx-auto px-4 py-20">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Skills & Expertise
