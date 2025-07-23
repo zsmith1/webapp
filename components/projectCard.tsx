@@ -4,14 +4,14 @@ import { Repository } from "../lib/interfaces"
 
 export function ProjectCard(repo: Repository) {
   return (
-    <Card className="group h-40 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border/50 hover:border-blue-500/30 bg-card/30 backdrop-blur-sm hover:bg-card/50 rounded-2xl overflow-hidden">
+    <Card className="group h-48 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border/50 hover:border-blue-500/30 bg-card/30 backdrop-blur-sm hover:bg-card/50 rounded-2xl overflow-hidden">
       <a
         href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
         className="block h-full p-0 no-underline"
       >
-        <CardHeader className="pb-2 space-y-2 p-4">
+        <CardHeader className="pb-1 space-y-0 p-4">
           <CardTitle className="text-base font-semibold flex items-start justify-between group-hover:text-blue-500 transition-colors duration-300">
             <span className="flex items-center gap-3">
               <div className="p-1.5 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-border/30 group-hover:from-blue-500/20 group-hover:to-purple-500/20 group-hover:border-blue-500/40 transition-all duration-300">
@@ -24,7 +24,7 @@ export function ProjectCard(repo: Repository) {
             </div>
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-0 px-4 pb-4">
+        <CardContent className="pt-0 px-4 pb-4 flex-1 flex flex-col justify-between">
           <CardDescription className="line-clamp-3 text-sm leading-relaxed text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
             {repo.description || "No description available"}
           </CardDescription>

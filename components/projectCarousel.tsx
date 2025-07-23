@@ -51,7 +51,7 @@ export function ProjectCarousel({ repos }: ProjectCarouselProps) {
         plugins={[autoplay.current]}
         onMouseEnter={autoplay.current.stop}
         onMouseLeave={() => isPlaying && autoplay.current.play()}
-        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl mx-auto [&_.embla]:overflow-visible [&_.embla__container]:overflow-visible [&_.embla__slide]:overflow-visible"
+        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl mx-auto h-52 [&_.embla]:overflow-visible [&_.embla__container]:overflow-visible [&_.embla__slide]:overflow-visible"
       >
         <CarouselContent className="-ml-2 md:-ml-4 overflow-visible">
           {repos.map((repo: Repository) => (
